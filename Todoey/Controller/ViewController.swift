@@ -8,10 +8,18 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    
     var itemArray = ["Stay home", "Work hard"]
+    
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let items = defaults.array(forKey: "ToDoListArray") as? [String] {
+            itemArray = items
+        }
+        
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -34,6 +42,7 @@ class ViewController: UITableViewController {
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     //MARK: - Add new items
@@ -44,11 +53,14 @@ class ViewController: UITableViewController {
         var textField = UITextField()
         
         let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+        
         let action =  UIAlertAction(title: "Add Item", style: .default) { (action) in
-            
             self.itemArray.append(textField.text!)
+            self.defaults.set(self.itemArray, forKey: "ToDoListArray")
             self.tableView.reloadData()
             }
+        
+        
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
             

@@ -11,15 +11,11 @@ class ViewController: UITableViewController {
     
     var itemArray = [Item]()
     
-    let defaults = UserDefaults.standard
-    
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let newItem = Item()
-        newItem.title = "nnn"
-        itemArray.append(newItem)
-
+        print(dataFilePath!)
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,11 +28,13 @@ class ViewController: UITableViewController {
         
         cell.textLabel?.text = item.title
         
-        if item.isChecked == true {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        //Ternary oparator
+        //value = condition ? valueTrue : valueFalse
+        
+        cell.accessoryType = item.isChecked == true ? .checkmark : .none
+        
+//        if item.isChecked == true { cell.accessoryType = .checkmark
+//        } else { cell.accessoryType = .none }
         return cell
     }
 
@@ -45,7 +43,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         itemArray[indexPath.row].isChecked = !itemArray[indexPath.row].isChecked
-        tableView.reloadData()
+        saveItems()
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
@@ -66,10 +64,9 @@ class ViewController: UITableViewController {
             
             self.itemArray.append(newItem)
             
-            self.defaults.set(self.itemArray, forKey: "ToDoListArray")
-            self.tableView.reloadData()
+            self.saveItems()
+            
             }
-        
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
@@ -81,6 +78,17 @@ class ViewController: UITableViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+    }
+    func saveItems() {
+        let encoder = PropertyListEncoder()
+        
+        do {
+            let data = try encoder.encode(itemArray)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print(error)
+        }
+        self.tableView.reloadData()
     }
 }
 

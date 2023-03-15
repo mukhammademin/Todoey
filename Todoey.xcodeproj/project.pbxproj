@@ -13,7 +13,7 @@
 		8A03663729BE6BFB00922B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A03663629BE6BFB00922B32 /* Assets.xcassets */; };
 		8A03663A29BE6BFB00922B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A03663829BE6BFB00922B32 /* LaunchScreen.storyboard */; };
 		8A63C66729BEDD8C006535E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A63C66629BEDD8C006535E8 /* Main.storyboard */; };
-		8A6590FC29BEDA25006B0376 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6590FB29BEDA24006B0376 /* Item.swift */; };
+		8AB37BFE29C01F29004B579A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AB37BFC29C01F29004B579A /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		8A03664029BE6BFC00922B32 /* TodoeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A03664A29BE6BFC00922B32 /* TodoeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A63C66629BEDD8C006535E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8A6590FB29BEDA24006B0376 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8AB37BFD29C01F29004B579A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +95,9 @@
 			children = (
 				8A03662D29BE6BFA00922B32 /* AppDelegate.swift */,
 				8A03662F29BE6BFA00922B32 /* SceneDelegate.swift */,
-				8A6590FE29BEDB70006B0376 /* Controller */,
 				8A6590FD29BEDB5F006B0376 /* Data Model */,
 				8A6590FF29BEDB7C006B0376 /* View */,
+				8A6590FE29BEDB70006B0376 /* Controller */,
 				8A65910029BEDB8C006B0376 /* Supported Files */,
 				8A03663B29BE6BFB00922B32 /* Info.plist */,
 			);
@@ -107,7 +107,7 @@
 		8A6590FD29BEDB5F006B0376 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				8A6590FB29BEDA24006B0376 /* Item.swift */,
+				8AB37BFC29C01F29004B579A /* DataModel.xcdatamodeld */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A03663229BE6BFA00922B32 /* ViewController.swift in Sources */,
-				8A6590FC29BEDA25006B0376 /* Item.swift in Sources */,
+				8AB37BFE29C01F29004B579A /* DataModel.xcdatamodeld in Sources */,
 				8A03662E29BE6BFA00922B32 /* AppDelegate.swift in Sources */,
 				8A03663029BE6BFA00922B32 /* SceneDelegate.swift in Sources */,
 			);
@@ -446,6 +446,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +475,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,6 +605,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8AB37BFC29C01F29004B579A /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8AB37BFD29C01F29004B579A /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 8AB37BFD29C01F29004B579A /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8A03662229BE6BFA00922B32 /* Project object */;
 }

@@ -96,7 +96,7 @@ class ViewController: UITableViewController {
         } catch {
             print(error)
         }
-        self.tableView.reloadData()
+       tableView.reloadData()
     }
     
     func loadData(with request: NSFetchRequest<Item> = Item.fetchRequest()) {

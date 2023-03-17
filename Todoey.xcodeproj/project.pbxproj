@@ -12,6 +12,7 @@
 		8A03663229BE6BFA00922B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03663129BE6BFA00922B32 /* ViewController.swift */; };
 		8A03663729BE6BFB00922B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A03663629BE6BFB00922B32 /* Assets.xcassets */; };
 		8A03663A29BE6BFB00922B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A03663829BE6BFB00922B32 /* LaunchScreen.storyboard */; };
+		8A3C0A1529C28C1A006746C2 /* CatigoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C0A1429C28C1A006746C2 /* CatigoryViewController.swift */; };
 		8A63C66729BEDD8C006535E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A63C66629BEDD8C006535E8 /* Main.storyboard */; };
 		8AB37BFE29C01F29004B579A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AB37BFC29C01F29004B579A /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		8A03663B29BE6BFB00922B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A03664029BE6BFC00922B32 /* TodoeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A03664A29BE6BFC00922B32 /* TodoeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A3C0A1429C28C1A006746C2 /* CatigoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatigoryViewController.swift; sourceTree = "<group>"; };
 		8A63C66629BEDD8C006535E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8AB37BFD29C01F29004B579A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				8A03663129BE6BFA00922B32 /* ViewController.swift */,
+				8A3C0A1429C28C1A006746C2 /* CatigoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				8AB37BFE29C01F29004B579A /* DataModel.xcdatamodeld in Sources */,
 				8A03662E29BE6BFA00922B32 /* AppDelegate.swift in Sources */,
 				8A03663029BE6BFA00922B32 /* SceneDelegate.swift in Sources */,
+				8A3C0A1529C28C1A006746C2 /* CatigoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
